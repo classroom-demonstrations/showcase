@@ -1,0 +1,660 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>4A Thermal Properties of Matter &#8212; demonstrating-the-theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/4 thermodynamics/4A thermal properties of matter/4A thermal properties of matter';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="4B Heat and the First Law" href="../4B%20heat%20and%20the%20first%20law/4B%20heat%20and%20the%20first%20law.html" />
+    <link rel="prev" title="4. Thermodynamics" href="../4%20thermodynamics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/TUD_logo.png" class="logo__image only-light" alt="demonstrating-the-theory - Home"/>
+    <script>document.write(`<img src="../../../_static/TUD_logo.png" class="logo__image only-dark" alt="demonstrating-the-theory - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    Demonstrating the Theory
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">TU Delft DemoLab</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/introduction.html">Introduction</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1%20mechanics/1%20mechanics.html">1. Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1A%20measurement/1A%20measurement.html">1A Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1C%20motion%20in%20one%20dimension/1C%20motion%20in%20one%20dimension.html">1C Motion in one Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1D%20motion%20in%20two%20dimensions/1D%20motion%20in%20two%20dimensions.html">1D-Motion in two Dimensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1E%20relative%20motion/1E%20relative%20motion.html">1E Relative Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1F%20newton%27s%20first%20law/1F%20newton%27s%20first%20law.html">1F Newton’s First Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1G%20newton%27s%20second%20law/1G%20newton%27s%20second%20law.html">1G Newton’s Second Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1H%20newton%27s%20third%20law/1H%20newton%27s%20third%20law.html">1H Newton’s Third Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1J%20statics%20of%20rigid%20bodies/1J%20statics%20of%20rigid%20bodies.html">1J Statics of Rigid Bodies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1K%20applications%20of%20newton%27s%20laws/1K%20applications%20of%20newton%27s%20laws.html">1K Applications of Newton’s Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1L%20gravity/1L%20gravity.html">1L Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1M%20work%20and%20energy/1M%20work%20and%20energy.html">1M Work and Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1N%20linear%20momentum%20and%20collisions/1N%20linear%20momentum%20and%20collisions.html">1N Linear Momentum and Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1Q%20rotational%20dynamics/1Q%20rotational%20dynamics.html">1Q Rotational Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1%20mechanics/1R%20properties%20of%20matter/1R%20properties%20of%20matter.html">1R Properties of Matter</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../2%20fluid%20mechanics/2%20fluid%20mechanics.html">2. Fluid Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20fluid%20mechanics/2A%20surface%20tension/2A%20surface%20tension.html">2A Surface Tension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20fluid%20mechanics/2B%20statics%20of%20fluids/2B%20statics%20of%20fluids.html">2B Statics of Fluids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20fluid%20mechanics/2C%20dynamics%20of%20fluids/2C%20dynamics%20of%20fluids.html">2C Dynamics of Fluids</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../3%20oscillations%20and%20waves/3%20oscillations%20and%20waves.html">3. Oscillations and Waves</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20oscillations%20and%20waves/3A%20oscillations/3A%20oscillations.html">3A Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20oscillations%20and%20waves/3B%20wave%20motion/3B%20wave%20motion.html">3B Wave Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20oscillations%20and%20waves/3C%20acoustics/3C%20acoustics.html">3CAcoustics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20oscillations%20and%20waves/3D%20instruments/3D%20instruments.html">3D Instruments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20oscillations%20and%20waves/3E%20sound%20reproduction/3E%20sound%20reproduction.html">3E Sound Reproduction</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../4%20thermodynamics.html">4. Thermodynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4A Thermal Properties of Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4B%20heat%20and%20the%20first%20law/4B%20heat%20and%20the%20first%20law.html">4B Heat and the First Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4C%20change%20of%20state/4C%20change%20of%20state.html">4C Change of State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4D%20kinetic%20theory/4D%20kinetic%20theory.html">4D Kinetic Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4E%20gas%20law/4E%20gas%20law.html">4E Gas Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4F%20entropy%20and%20the%20second%20law/4F%20entropy%20and%20the%20second%20law.html">4F Entropy and the Second Law</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../5%20electromagnetism/5%20electromagnetism.html">5. Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5A%20electrostatics/5A%20electrostatics.html">5A Electrostatics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5B%20electric%20fields%20and%20potential/5B%20electric%20fields%20and%20potential.html">5B Electric Fields and Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5C%20capacitance/5C%20capacitance.html">5C Capacitance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5D%20resistance/5D%20resistance.html">5D Resistance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5E%20electromotive%20force%20and%20current/5E%20electromotive%20force%20and%20current.html">5E Electromotive Force and Current</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5F%20DC%20circuits/5F%20DC%20circuits.html">5F DC Circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5G%20magnetic%20materials/5G%20magnetic%20materials.html">5G Magnetic Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5H%20magnetic%20fields%20and%20forces/5H%20magnetic%20fields%20and%20forces.html">5H Magnetic Fields and Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5J%20inductance/5J%20inductance.html">5J Inductance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5K%20electromagnetic%20induction/5K%20electromagnetic%20induction.html">5K Electromagnetic Induction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5L%20AC%20circuits/5L%20AC%20circuits.html">5L AC Circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5M%20semiconductors%20and%20tubes/5M%20semiconductors%20and%20tubes.html">5M Semiconductors and Tubes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20electromagnetism/5N%20electromagnetic%20radiation/5N%20electromagnetic%20radiation.html">5N Electromagnetic Radiation</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../6%20optics/6%20optics.html">6. Optics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20optics/6A%20geometrical%20optics/6A%20geometrical%20optics.html">6A Geometrical Optics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20optics/6B%20photometry/6B%20photometry.html">6B Photometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20optics/6C%20diffraction/6C%20diffraction.html">6C Diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20optics/6D%20interference/6D%20interference.html">6D Interference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20optics/6F%20color/6F%20color.html">6F Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20optics/6H%20polarisation/6H%20polarisation.html">6H Polarisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20optics/6J%20the%20eye/6J%20the%20eye.html">6J The Eye</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20optics/6Q%20modern%20optics/6Q%20modern%20optics.html">6Q Modern Optics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../7%20modern%20physics/7%20modern%20physics.html">7. Modern Physics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../7%20modern%20physics/7A%20quantum%20effects/7A%20quantum%20effects.html">7A Quantum Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../7%20modern%20physics/7B%20atomic%20physics/7B%20atomic%20physics.html">7B Atomic Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../7%20modern%20physics/7D%20nuclear%20physics/7D%20nuclear%20physics.html">7D Nuclear Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../7%20modern%20physics/7E%20elementary%20particles/7E%20elementary%20particles.html">7E Elementary Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../7%20modern%20physics/7F%20relativity/7F%20relativity.html">7F Relativity</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../8%20astronomy/8%20astronomy.html">8. Astronomy</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../9%20miscellaneous/9%20miscellaneous.html">9. Miscellaneous</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../10%20films%20and%20video/10%20films%20and%20video.html">10. Films and Video</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography/bibliography.html">Bibliography</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">Index</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/git/https%3A//gitlab.tudelft.nl/education/as/ap/demolab/master?urlpath=tree/book/4 thermodynamics/4A thermal properties of matter/4A thermal properties of matter.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/book/4 thermodynamics/4A thermal properties of matter/4A thermal properties of matter.ipynb" target="_blank"
+   class="btn btn-sm btn-download-notebook-button dropdown-item"
+   title="Download notebook file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="../../../_sources/book/4 thermodynamics/4A thermal properties of matter/4A thermal properties of matter.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4A Thermal Properties of Matter</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a10-thermometry">4A10 Thermometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a20-liquid-expansion">4A20 Liquid Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a30-solid-expansion">4A30 Solid Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a40-properties-of-materials-at-low-temperature">4A40 Properties of Materials at Low Temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a50-liquid-helium">4A50 Liquid Helium</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <nav class="contents" id="contents" role="doc-toc">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#a-thermal-properties-of-matter" id="id1">4A Thermal Properties of Matter</a></p>
+<ul>
+<li><p><a class="reference internal" href="#a10-thermometry" id="id2">4A10 Thermometry</a></p></li>
+<li><p><a class="reference internal" href="#a20-liquid-expansion" id="id3">4A20 Liquid Expansion</a></p></li>
+<li><p><a class="reference internal" href="#a30-solid-expansion" id="id4">4A30 Solid Expansion</a></p></li>
+<li><p><a class="reference internal" href="#a40-properties-of-materials-at-low-temperature" id="id5">4A40 Properties of Materials at Low Temperature</a></p></li>
+<li><p><a class="reference internal" href="#a50-liquid-helium" id="id6">4A50 Liquid Helium</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="a-thermal-properties-of-matter">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">4A Thermal Properties of Matter</a><a class="headerlink" href="#a-thermal-properties-of-matter" title="Permalink to this heading">#</a></h1>
+<section id="a10-thermometry">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">4A10 Thermometry</a><a class="headerlink" href="#a10-thermometry" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="a20-liquid-expansion">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">4A20 Liquid Expansion</a><a class="headerlink" href="#a20-liquid-expansion" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="a30-solid-expansion">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">4A30 Solid Expansion</a><a class="headerlink" href="#a30-solid-expansion" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="a40-properties-of-materials-at-low-temperature">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">4A40 Properties of Materials at Low Temperature</a><a class="headerlink" href="#a40-properties-of-materials-at-low-temperature" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="a50-liquid-helium">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">4A50 Liquid Helium</a><a class="headerlink" href="#a50-liquid-helium" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "None/None",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book\4 thermodynamics\4A thermal properties of matter"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../4%20thermodynamics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4. Thermodynamics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../4B%20heat%20and%20the%20first%20law/4B%20heat%20and%20the%20first%20law.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4B Heat and the First Law</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a10-thermometry">4A10 Thermometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a20-liquid-expansion">4A20 Liquid Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a30-solid-expansion">4A30 Solid Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a40-properties-of-materials-at-low-temperature">4A40 Properties of Materials at Low Temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a50-liquid-helium">4A50 Liquid Helium</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ron Haaksman, @date
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright Delft University of Technology, CC BY 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

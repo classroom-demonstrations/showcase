@@ -1,0 +1,591 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>demonstrating-the-theory &#8212; demonstrating-the-theory</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/TUD_logo.png" class="logo__image only-light" alt="demonstrating-the-theory - Home"/>
+    <script>document.write(`<img src="_static/TUD_logo.png" class="logo__image only-dark" alt="demonstrating-the-theory - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Demonstrating the Theory
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">TU Delft DemoLab</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="book/introduction/introduction.html">Introduction</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/1%20mechanics/1%20mechanics.html">1. Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1A%20measurement/1A%20measurement.html">1A Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1C%20motion%20in%20one%20dimension/1C%20motion%20in%20one%20dimension.html">1C Motion in one Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1D%20motion%20in%20two%20dimensions/1D%20motion%20in%20two%20dimensions.html">1D-Motion in two Dimensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1E%20relative%20motion/1E%20relative%20motion.html">1E Relative Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1F%20newton%27s%20first%20law/1F%20newton%27s%20first%20law.html">1F Newton’s First Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1G%20newton%27s%20second%20law/1G%20newton%27s%20second%20law.html">1G Newton’s Second Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1H%20newton%27s%20third%20law/1H%20newton%27s%20third%20law.html">1H Newton’s Third Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1J%20statics%20of%20rigid%20bodies/1J%20statics%20of%20rigid%20bodies.html">1J Statics of Rigid Bodies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1K%20applications%20of%20newton%27s%20laws/1K%20applications%20of%20newton%27s%20laws.html">1K Applications of Newton’s Laws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1L%20gravity/1L%20gravity.html">1L Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1M%20work%20and%20energy/1M%20work%20and%20energy.html">1M Work and Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1N%20linear%20momentum%20and%20collisions/1N%20linear%20momentum%20and%20collisions.html">1N Linear Momentum and Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1Q%20rotational%20dynamics/1Q%20rotational%20dynamics.html">1Q Rotational Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/1%20mechanics/1R%20properties%20of%20matter/1R%20properties%20of%20matter.html">1R Properties of Matter</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/2%20fluid%20mechanics/2%20fluid%20mechanics.html">2. Fluid Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/2%20fluid%20mechanics/2A%20surface%20tension/2A%20surface%20tension.html">2A Surface Tension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/2%20fluid%20mechanics/2B%20statics%20of%20fluids/2B%20statics%20of%20fluids.html">2B Statics of Fluids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/2%20fluid%20mechanics/2C%20dynamics%20of%20fluids/2C%20dynamics%20of%20fluids.html">2C Dynamics of Fluids</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/3%20oscillations%20and%20waves/3%20oscillations%20and%20waves.html">3. Oscillations and Waves</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/3%20oscillations%20and%20waves/3A%20oscillations/3A%20oscillations.html">3A Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/3%20oscillations%20and%20waves/3B%20wave%20motion/3B%20wave%20motion.html">3B Wave Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/3%20oscillations%20and%20waves/3C%20acoustics/3C%20acoustics.html">3CAcoustics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/3%20oscillations%20and%20waves/3D%20instruments/3D%20instruments.html">3D Instruments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/3%20oscillations%20and%20waves/3E%20sound%20reproduction/3E%20sound%20reproduction.html">3E Sound Reproduction</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/4%20thermodynamics/4%20thermodynamics.html">4. Thermodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/4%20thermodynamics/4A%20thermal%20properties%20of%20matter/4A%20thermal%20properties%20of%20matter.html">4A Thermal Properties of Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/4%20thermodynamics/4B%20heat%20and%20the%20first%20law/4B%20heat%20and%20the%20first%20law.html">4B Heat and the First Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/4%20thermodynamics/4C%20change%20of%20state/4C%20change%20of%20state.html">4C Change of State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/4%20thermodynamics/4D%20kinetic%20theory/4D%20kinetic%20theory.html">4D Kinetic Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/4%20thermodynamics/4E%20gas%20law/4E%20gas%20law.html">4E Gas Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/4%20thermodynamics/4F%20entropy%20and%20the%20second%20law/4F%20entropy%20and%20the%20second%20law.html">4F Entropy and the Second Law</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/5%20electromagnetism/5%20electromagnetism.html">5. Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5A%20electrostatics/5A%20electrostatics.html">5A Electrostatics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5B%20electric%20fields%20and%20potential/5B%20electric%20fields%20and%20potential.html">5B Electric Fields and Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5C%20capacitance/5C%20capacitance.html">5C Capacitance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5D%20resistance/5D%20resistance.html">5D Resistance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5E%20electromotive%20force%20and%20current/5E%20electromotive%20force%20and%20current.html">5E Electromotive Force and Current</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5F%20DC%20circuits/5F%20DC%20circuits.html">5F DC Circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5G%20magnetic%20materials/5G%20magnetic%20materials.html">5G Magnetic Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5H%20magnetic%20fields%20and%20forces/5H%20magnetic%20fields%20and%20forces.html">5H Magnetic Fields and Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5J%20inductance/5J%20inductance.html">5J Inductance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5K%20electromagnetic%20induction/5K%20electromagnetic%20induction.html">5K Electromagnetic Induction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5L%20AC%20circuits/5L%20AC%20circuits.html">5L AC Circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5M%20semiconductors%20and%20tubes/5M%20semiconductors%20and%20tubes.html">5M Semiconductors and Tubes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/5%20electromagnetism/5N%20electromagnetic%20radiation/5N%20electromagnetic%20radiation.html">5N Electromagnetic Radiation</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/6%20optics/6%20optics.html">6. Optics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/6%20optics/6A%20geometrical%20optics/6A%20geometrical%20optics.html">6A Geometrical Optics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/6%20optics/6B%20photometry/6B%20photometry.html">6B Photometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/6%20optics/6C%20diffraction/6C%20diffraction.html">6C Diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/6%20optics/6D%20interference/6D%20interference.html">6D Interference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/6%20optics/6F%20color/6F%20color.html">6F Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/6%20optics/6H%20polarisation/6H%20polarisation.html">6H Polarisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/6%20optics/6J%20the%20eye/6J%20the%20eye.html">6J The Eye</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/6%20optics/6Q%20modern%20optics/6Q%20modern%20optics.html">6Q Modern Optics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/7%20modern%20physics/7%20modern%20physics.html">7. Modern Physics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/7%20modern%20physics/7A%20quantum%20effects/7A%20quantum%20effects.html">7A Quantum Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/7%20modern%20physics/7B%20atomic%20physics/7B%20atomic%20physics.html">7B Atomic Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/7%20modern%20physics/7D%20nuclear%20physics/7D%20nuclear%20physics.html">7D Nuclear Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/7%20modern%20physics/7E%20elementary%20particles/7E%20elementary%20particles.html">7E Elementary Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="book/7%20modern%20physics/7F%20relativity/7F%20relativity.html">7F Relativity</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="book/8%20astronomy/8%20astronomy.html">8. Astronomy</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="book/9%20miscellaneous/9%20miscellaneous.html">9. Miscellaneous</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="book/10%20films%20and%20video/10%20films%20and%20video.html">10. Films and Video</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="book/bibliography/bibliography.html">Bibliography</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/README.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>demonstrating-the-theory</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">demonstrating-the-theory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-book">Building the book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hosting-the-book">Hosting the book</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#credits">Credits</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#https-mstruwig-com-posts-jupyterbook-video">https://mstruwig.com/posts/jupyterbook-video/</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="demonstrating-the-theory">
+<h1>demonstrating-the-theory<a class="headerlink" href="#demonstrating-the-theory" title="Permalink to this heading">#</a></h1>
+<p>A collection of demonstrations</p>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<section id="building-the-book">
+<h3>Building the book<a class="headerlink" href="#building-the-book" title="Permalink to this heading">#</a></h3>
+<p>If you’d like to develop and/or build the demonstrating-the-theory book, you should:</p>
+<ol class="arabic simple">
+<li><p>Clone this repository</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> (it is recommended you do this within a virtual environment)</p></li>
+<li><p>(Optional) Edit the books source files located in the <code class="docutils literal notranslate"><span class="pre">demonstrating-the-theory/</span></code> directory</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">clean</span> <span class="pre">demonstrating-the-theory/</span></code> to remove any existing builds</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">demonstrating-the-theory/</span></code></p></li>
+</ol>
+<p>A fully-rendered HTML version of the book will be built in <code class="docutils literal notranslate"><span class="pre">demonstrating-the-theory/_build/html/</span></code>.</p>
+</section>
+<section id="hosting-the-book">
+<h3>Hosting the book<a class="headerlink" href="#hosting-the-book" title="Permalink to this heading">#</a></h3>
+<p>Please see the <a class="reference external" href="https://jupyterbook.org/publish/web.html">Jupyter Book documentation</a> to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.</p>
+<p>For GitHub and GitLab deployment specifically, the <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book">cookiecutter-jupyter-book</a> includes templates for, and information about, optional continuous integration (CI) workflow files to help easily and automatically deploy books online with GitHub or GitLab. For example, if you chose <code class="docutils literal notranslate"><span class="pre">github</span></code> for the <code class="docutils literal notranslate"><span class="pre">include_ci</span></code> cookiecutter option, your book template was created with a GitHub actions workflow file that, once pushed to GitHub, automatically renders and pushes your book to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch of your repo and hosts it on GitHub Pages when a push or pull request is made to the main branch.</p>
+</section>
+</section>
+<section id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading">#</a></h2>
+<p>We welcome and recognize all contributions. You can see a list of current contributors in the <a class="reference external" href="https://github.com/classroom-demonstrations/demonstrating-the-theory/graphs/contributors">contributors tab</a>.</p>
+</section>
+<section id="credits">
+<h2>Credits<a class="headerlink" href="#credits" title="Permalink to this heading">#</a></h2>
+<p>This project is created using the excellent open source <a class="reference external" href="https://jupyterbook.org/">Jupyter Book project</a> and the <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book">executablebooks/cookiecutter-jupyter-book template</a>.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="https-mstruwig-com-posts-jupyterbook-video">
+<h1><a class="reference external" href="https://mstruwig.com/posts/jupyterbook-video/">https://mstruwig.com/posts/jupyterbook-video/</a><a class="headerlink" href="#https-mstruwig-com-posts-jupyterbook-video" title="Permalink to this heading">#</a></h1>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "None/None",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">demonstrating-the-theory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-book">Building the book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hosting-the-book">Hosting the book</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#credits">Credits</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#https-mstruwig-com-posts-jupyterbook-video">https://mstruwig.com/posts/jupyterbook-video/</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ron Haaksman, @date
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright Delft University of Technology, CC BY 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

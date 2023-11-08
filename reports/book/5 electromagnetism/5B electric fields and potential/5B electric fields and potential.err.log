@@ -1,0 +1,114 @@
+Traceback (most recent call last):
+  File "C:\Users\rhaaksman\Anaconda3\envs\demolab\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\rhaaksman\Anaconda3\envs\demolab\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rhaaksman\Anaconda3\envs\demolab\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rhaaksman\Anaconda3\envs\demolab\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\rhaaksman\Anaconda3\envs\demolab\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\rhaaksman\Anaconda3\envs\demolab\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\rhaaksman\Anaconda3\envs\demolab\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Aug 30 13:29:31 2022
+
+@author: rhaaksman
+"""
+
+#%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+#import matplotlib.animation as manimation
+from scipy.integrate import odeint
+
+#manimation.writers.list() # just to check whick writers are installed
+
+## Check the documents.
+#odeint?
+
+## In this page, the second order differential equation for the angle theta of a pendulum acted on by gravity with friction is solved in imitaion of the official document. The equations can be written as follows:
+## θ′(t)ω′(t)=ω(t)=−b ω(t)−c sin(θ(t))
+## hereafter, let:
+## y(t)=(θ(t)ω(t))
+## with the boundary condition:
+## y(0)=(π−0.10.0)
+## Firstly, define the function which returns dydt.
+def pend(y, t, b, c):
+    theta, omega = y
+    dydt = [omega, -b*omega - c*np.sin(theta)]
+    return dydt
+
+## Secondly, define the constants, the boundary condition, and time range for the simulation.
+b = 0.25
+c = 5.0
+y0 = [np.pi - 0.1, 0.0]
+t = np.linspace(0, 20, 301)
+
+## Thirdly, solve the equation using odeint function.
+sol = odeint(pend, y0, t, args=(b, c))
+
+## Show the output
+plt.plot(t, sol[:, 0], 'b', label='theta(t)')
+plt.plot(t, sol[:, 1], 'g', label='omega(t)')
+plt.legend(loc='best')
+plt.xlabel('t')
+plt.grid()
+plt.show()
+
+## Convert the result to an animation.
+fig = plt.figure(figsize=(5, 5), facecolor='w')
+ax = fig.add_subplot(1, 1, 1)
+plt.rcParams['font.size'] = 15
+
+lns = []
+for i in range(len(sol)):
+    ln, = ax.plot([0, np.sin(sol[i, 0])], [0, -np.cos(sol[i, 0])],
+                  color='k', lw=2)
+    tm = ax.text(-1, 0.9, 'time = %.1fs' % t[i])
+    lns.append([ln, tm])
+ax.set_aspect('equal', 'datalim')
+ax.grid()
+ani = animation.ArtistAnimation(fig, lns, interval=50)
+
+## Save the animation in the mp4 and gif format using ffmpeg and imagemagick, respectively.
+fn = 'odeint_single_pendulum_artistanimation'
+ani.save(fn+'.mp4',writer='ffmpeg',fps=1000/50)
+ani.save(fn+'.gif',writer='imagemagick',fps=1000/50)
+
+## Reduce the size of the GIF file using imagemagick.
+import subprocess
+cmd = 'magick convert %s.gif -fuzz 10%% -layers Optimize %s_r.gif'%(fn,fn)
+subprocess.check_output(cmd)
+
+## Finaly, show the animation in the jupyter notebook.
+plt.rcParams['animation.html'] = 'html5'
+ani
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[2], line 9[0m
+[0;32m      2[0m [38;5;124;03m"""[39;00m
+[0;32m      3[0m [38;5;124;03mCreated on Tue Aug 30 13:29:31 2022[39;00m
+[0;32m      4[0m 
+[0;32m      5[0m [38;5;124;03m@author: rhaaksman[39;00m
+[0;32m      6[0m [38;5;124;03m"""[39;00m
+[0;32m      8[0m [38;5;66;03m#%matplotlib inline[39;00m
+[1;32m----> 9[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;32m     10[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[0;32m     11[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01manimation[39;00m [38;5;28;01mas[39;00m [38;5;21;01manimation[39;00m
+
+[1;31mModuleNotFoundError[0m: No module named 'numpy'
+
